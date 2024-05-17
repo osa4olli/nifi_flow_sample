@@ -32,7 +32,108 @@
       "y" : 0.0
     },
     "processGroups" : [ ],
-    "processors" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-azure-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.0.0-M3"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "27fb6fa8-2d0d-310c-8b9b-5231a23982d0",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "FetchAzureBlobStorage_v12",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 575.0,
+        "y" : 186.0
+      },
+      "properties" : {
+        "blob-name" : "${azure.blobname}",
+        "container-name" : "${azure.container}",
+        "Client-Side Encryption Key Type" : "NONE"
+      },
+      "propertyDescriptors" : {
+        "range-length" : {
+          "displayName" : "Range Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "range-length",
+          "sensitive" : false
+        },
+        "range-start" : {
+          "displayName" : "Range Start",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "range-start",
+          "sensitive" : false
+        },
+        "blob-name" : {
+          "displayName" : "Blob Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "blob-name",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "Client-Side Encryption Key ID" : {
+          "displayName" : "Client-Side Encryption Key ID",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Client-Side Encryption Key ID",
+          "sensitive" : false
+        },
+        "storage-credentials-service" : {
+          "displayName" : "Storage Credentials",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "storage-credentials-service",
+          "sensitive" : false
+        },
+        "container-name" : {
+          "displayName" : "Container Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "container-name",
+          "sensitive" : false
+        },
+        "Client-Side Encryption Key Type" : {
+          "displayName" : "Client-Side Encryption Key Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Client-Side Encryption Key Type",
+          "sensitive" : false
+        },
+        "Client-Side Encryption Local Key" : {
+          "displayName" : "Client-Side Encryption Local Key",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Client-Side Encryption Local Key",
+          "sensitive" : true
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.azure.storage.FetchAzureBlobStorage_v12",
+      "yieldDuration" : "1 sec"
+    } ],
     "remoteProcessGroups" : [ ],
     "scheduledState" : "ENABLED",
     "statelessFlowTimeout" : "1 min"
